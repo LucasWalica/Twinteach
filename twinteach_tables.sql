@@ -22,6 +22,12 @@ CREATE TABLE COFRE(
 )
 -- (FLOOR(RAND() * 20) + 1); (NUMERO RANDOM DE 1 A 20) EJEMPLO
 
+create table cofre_alumno(
+    ID_cofre_alumno int PRIMARY key AUTO_INCREMENT,
+    ID_ALUMNO_CLASE int FOREIGN key (ID_ALUMNO_CLASE) REFERENCES ALUMNO_CLASE(ID_ALUMNO_CLASE) not null,
+    ID_cofre int FOREIGN key (ID_cofre) REFERENCES COFRE(ID) not null
+)
+
 --relacion con un regalo entre medias->
 CREATE TABLE PROF_PUNTUAR(
     ID_PUNTUAJE INT PRIMARY KEY PRIMARY KEY,
