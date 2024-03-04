@@ -1,0 +1,62 @@
+1-crear cuenta-> 
+(insert)
+
+2-login->
+(select * mail y contraseña)
+
+3-cambiar icono
+
+4-profesor crear cuenta 
+(insert)
+
+5-login profesor
+
+6-crear nueva clase/curso
+(devuelve codigos para alumnos)
+
+7-ver informacion del curso 
+
+8-Alumno inserta codigo de curso/solicita curso 
+
+9-Profesor acepta alumno 
+(update)
+
+10-ver alumnos_curso, num profesores_curso
+
+11_ver cursos de un alumno en particular (creado)
+
+12-se le dan objetos al alumno al aceptarle 
+(huevo, oro y cofre)
+
+13-Abrir cofre 
+
+14-Insertar objetos del cofre abierto
+(monedas, piedras de fuego, calabaza, hansel)
+
+15-ver pueblo (ver chibis)
+
+16-ver softskills 
+
+17-evaluar compeñeros 
+(mostrar username e icono de los alumnos antes de dar puntos)
+(le da items al puntuador, puntos de valoracion)
+
+18-profesor crea ranking 
+    
+    18.1 profesor crea tarea 
+        (alumnos tienen nota en la tarea)
+
+    18.profesor guarda notas a 10 y entrega cofres
+
+19-alumno mira rankings del curso 
+    19.1-alumno mira objetos 
+
+20-Alumno ataca a otro 
+    (monedas cambia, codicia, chibis seleccionados, se compara)
+    (insert tabla notificaciones)
+
+
+
+
+
+
