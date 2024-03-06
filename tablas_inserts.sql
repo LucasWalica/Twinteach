@@ -28,6 +28,7 @@ SELECT ID FROM PROFESOR WHERE EMAIL="fonsifonsifonsi@fonsi.fonsi" AND CONTRASEÑ
 INSERT INTO CLASE(NOMBRE, ID_PROFESOR) VALUES 
 ("BADAT", (SELECT ID FROM PROFESOR WHERE NOMBRE = 'FONSI'));
 
+
 INSERT INTO ALUMNO_CLASE()
 
 
@@ -36,3 +37,28 @@ INSERT INTO ALUMNO_CLASE()
 select alumno.nombre, clase.nombre, clase.id, clase.PERIODO_PAZ  from alumno 
 join ALUMNO_CLASE on ALUMNO_CLASE.id = alumno.id
 join clase on clase.id_clase = clase.id
+
+INSERT INTO ALUMNO(NOMBRE, CONTRASEÑA, EMAIL) VALUES (
+    ("Pito", "loremipsum123", "1234");
+    ("Pato", "loremipsum1234", "12345");
+    ("Thomas Jefferson", "loremipsum1234532123", "futbol");
+)
+
+INSERT INTO ALUMNO_CLASE(ID_ALUMNO, ID_PROFESOR, ID_CLASE) VALUES {
+    ((SELECT ID FROM ALUMNO WHERE NOMBRE ="Pito"), 
+        (SELECT ID FROM PROFESOR WHERE NOMBRE = 'fonsi'), 
+        (SELECT ID FROM CLASE WHERE NOMBRE = "BADAT")
+    ),
+    ((SELECT ID FROM ALUMNO WHERE NOMBRE ="Pato"), 
+        (SELECT ID FROM PROFESOR WHERE NOMBRE = 'fonsi'), 
+        (SELECT ID FROM CLASE WHERE NOMBRE = "BADAT")
+    ),
+    ((SELECT ID FROM ALUMNO WHERE NOMBRE ="Thomas Jefferson"), 
+        (SELECT ID FROM PROFESOR WHERE NOMBRE = 'fonsi'), 
+        (SELECT ID FROM CLASE WHERE NOMBRE = "BADAT")
+    ),
+
+
+}
+
+
