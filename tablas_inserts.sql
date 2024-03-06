@@ -27,4 +27,12 @@ SELECT ID FROM PROFESOR WHERE EMAIL="fonsifonsifonsi@fonsi.fonsi" AND CONTRASEÑ
 6-crear nueva clase/curso
 INSERT INTO CLASE(NOMBRE, ID_PROFESOR) VALUES 
 ("BADAT", (SELECT ID FROM PROFESOR WHERE NOMBRE = 'FONSI'));
+
 INSERT INTO ALUMNO_CLASE()
+
+
+
+7-ver informacion del curso 
+select alumno.nombre, clase.nombre, clase.id, clase.PERIODO_PAZ  from alumno 
+join ALUMNO_CLASE on ALUMNO_CLASE.id = alumno.id
+join clase on clase.id_clase = clase.id
