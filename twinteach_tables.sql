@@ -16,7 +16,8 @@ create table aceptar_alumno(
     ID int PRIMARY key AUTO_INCREMENT,
     ID_ALUMNO INT,
     ID_Profesor int,
-    alumno_aceptado int check(alumno_aceptado in(1, 2)),
+    CLAVE VARCHAR(30) NOT NULL,
+    alumno_aceptado int check(alumno_aceptado in(1, 2, 3)),
     FOREIGN key (ID_ALUMNO) REFERENCES alumno(ID),
     FOREIGN key(ID_Profesor) REFERENCES PROFESOR(ID)
 )
