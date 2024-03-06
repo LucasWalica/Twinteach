@@ -14,18 +14,14 @@ SELECT ID FROM ALUMNO WHERE CORREO = 'pepito@correo.com' AND CONTRASEÑA = "hunt
 
 UPDATE TABLE ALUMNO_CLASE SET ICONO = "urlejemplo2";
 
-4
+4 profesor crear cuenta 
 
-INSERT INTO PROFESOR (NOMBRE, EMAIL) VALUES (
-    ("fonsi", "fonsifonsifonsi@fonsi.fonsi");
+INSERT INTO PROFESOR (NOMBRE, EMAIL, CONTRASEÑA) VALUES (
+    ("fonsi", "fonsifonsifonsi@fonsi.fonsi", "uwuwuwueOssas");
 );
 
 5-login profesor
 
-SELECT ID FROM PROFESOR WHERE NOMBRE="fonsi" AND EMAIL="fonsifonsifonsi@fonsi.fonsi";
+SELECT ID FROM PROFESOR WHERE EMAIL="fonsifonsifonsi@fonsi.fonsi" AND CONTRASEÑA="uwuwuwueOssas"
 
-
-6-crear nueva clase/curso
-INSERT INTO CLASE(NOMBRE, ID_PROFESOR) VALUES 
-("BADAT", (SELECT ID FROM PROFESOR WHERE NOMBRE = 'FONSI'));
-INSERT INTO ALUMNO_CLASE()
+6-
