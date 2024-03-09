@@ -14,6 +14,14 @@ CREATE TABLE PROFESOR(
     ICONO VARCHAR(2083) NOT NULL DEFAULT "iconoguapo.com"
 )
 
+create table clase (
+    ID int PRIMARY key AUTO_INCREMENT,
+    Nombre varchar(100) not null,
+    PERIODO_PAZ int check(PERIODO_PAZ in(1,2)),
+    ID_Profesor int,
+    FOREIGN KEY (ID_Profesor) REFERENCES PROFESOR(ID)
+)
+
 create table aceptar_alumno(
     ID int PRIMARY key AUTO_INCREMENT,
     ID_ALUMNO INT,
