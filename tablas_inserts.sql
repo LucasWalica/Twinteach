@@ -174,9 +174,3 @@ values
 20-Alumno ataca a otro 
     (monedas cambia, codicia, chibis seleccionados, se compara)
     (insert tabla notificaciones)
-
-
-
-
-
-
