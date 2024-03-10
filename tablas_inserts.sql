@@ -130,9 +130,34 @@ select CHIBIS.id from chibis
 where chibis.ID_PROPIETARIO = 1 
 
 16-ver softskills 
+-- todas las softskills
+select distinct softskills.nombre from softskills
+
+-- de un alumno
+select * from softskills where 
+softskills.ID_ALUMNO_CLASE = 1
 
 
-17-
+17-evaluar compañeros 
+(mostrar username e icono de los alumnos antes de dar puntos)
+(le da items al puntuador, puntos de valoracion)
+
+-- mostrar username e iconos de alumnos 
+select alumno.nombre, alumno.icono from alumno 
+join ALUMNO_CLASE on alumno.id = ALUMNO_CLASE.id_alumno
+join clase on clase.id = alumno_clase.id_clase
+where clase.nombre = "BADAT"
+
+-- puntuar softskills
+insert into PUNTUAR(ID_PUNTUADOR, ID_PUNTUADO, SOFTSKILL, CANTIDAD)
+values 
+(1, 2, "Responsabilidad", 2)
+-- añadir objeto tienda
+insert into OBJETOS_TIENDA(ID_objeto, ID_PROPIETARIO, funcion)
+values (21, 1, "permite alimnetar al dragon")
+
+-- 18 profesor crea ranking 
+insert into ranking(nombre_habilidad, )
 
 
 
