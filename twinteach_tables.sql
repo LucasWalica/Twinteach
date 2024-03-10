@@ -110,6 +110,19 @@ CREATE TABLE PUNTUAR(
     FOREIGN KEY(ID_PUNTUADO) REFERENCES ALUMNO_CLASE(ID_ALUMNO_CLASE)
 )
 
+create table softskills(
+    id_softskill int PRIMARY key AUTO_INCREMENT, 
+    nombre varchar(80),
+    CHECK(nombre="Responsabilidad" or
+          nombre="Cooperacion" or 
+          nombre="Autonomia_e_iniciativa" or 
+          nombre="Gestion_emocional" or 
+          nombre="Habilidad_de_pensamiento"),
+    ID_ALUMNO_CLASE int not null, 
+    FOREIGN key (ID_ALUMNO_CLASE) REFERENCES ALUMNO_CLASE(ID_ALUMNO_CLASE),
+    puntos int not null check(puntos>=0)
+)
+
 -- MONIGOTES
 
 CREATE TABLE DRAGON(
