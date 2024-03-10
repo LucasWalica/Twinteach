@@ -85,6 +85,55 @@ join ALUMNO_CLASE on alumno.id = ALUMNO_CLASE.ID_ALUMNO
 join clase on ALUMNO_CLASE.ID_CLASE = clase.id 
 where alumno.nombre = "Pepito"
 
-12 - 
+12 - se le dan objetos al alumno al aceptarle 
+(huevo, oro y cofre)
+
+insert into OBJETOS_TIENDA(ID_objeto, ID_PROPIETARIO,FUNCION)
+values 
+(1, 1 , "Abrelo o espera a que eclosione")
+-- huevo
+
+update ALUMNO_CLASE 
+set ALUMNO_CLASE.oro = ALUMNO_CLASE.oro + 20
+where ALUMNO_CLASE.id = 1
+-- oro 
+
+insert into cofre_alumno(ID_ALUMNO_CLASE, ID_cofre)
+(1, 1)
+-- cofre de madera (habria que crear el cofre)
+
+13-Abrir cofre
+
+14-Insertar objetos del cofre abierto
+(monedas, piedras de fuego, calabaza, hansel)
+
+delete from cofre_alumno 
+where ID_ALUMNO_CLASE = 1 and ID_cofre = 1 
+
+update ALUMNO_CLASE
+set ALUMNO_CLASE.oro = ALUMNO_CLASE.oro + 20 
+where ALUMNO_CLASE.id = 1 
+
+insert into OBJETOS_TIENDA(ID_objeto, ID_PROPIETARIO, funcion)
+values 
+(4, 1, "gemas para el dragon")
+(6, 1, "Piedras de conquista")
+
+insert into CHIBIS(ID_PROPIETARIO, nombre, ataque, defensa, DESCRIPCION, FAMILIA)
+values 
+    (1,1, "hansel", 0, 2, "", 1)
+    (21,1, "anubis", 10, 10, "dios egipcio", 8)
+
+15 - ver pueblo/CHIBIS
+
+select CHIBIS.id from chibis 
+where chibis.ID_PROPIETARIO = 1 
+
+16-ver softskills 
+
+
+17-
+
+
 
 
