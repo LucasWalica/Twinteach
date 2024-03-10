@@ -6,6 +6,13 @@ create table alumno(
     ICONO VARCHAR(2083) NOT NULL
 )
 
+create table participar(
+    id int PRIMARY key AUTO_INCREMENT,
+    id_alumno int not null, 
+    FOREIGN key (id_alumno) REFERENCES alumno(ID),
+    aceptado int check (aceptado in (1, 2))
+)
+
 CREATE TABLE PROFESOR(
     ID INT PRIMARY KEY AUTO_INCREMENT,
     CORREO VARCHAR(40) NOT NULL,
@@ -208,7 +215,7 @@ create table ranking(
 )
 
 
--- done
+
 CREATE TABLE    (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     NOMBRE VARCHAR(30) NOT NULL,
