@@ -37,7 +37,7 @@
 
 16-ver softskills 
 
-17-evaluar compeñeros 
+17-evaluar compañeros 
 (mostrar username e icono de los alumnos antes de dar puntos)
 (le da items al puntuador, puntos de valoracion)
 
