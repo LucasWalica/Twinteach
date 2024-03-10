@@ -163,7 +163,18 @@ insert into ranking(nombre_habilidad,id_clase)
 values 
     ("Base de datos", 1)
 
-18.1 profesor crea tarea 
+    18.1 profesor crea tarea 
+
+
+    18.2 profesor guarda notas a 10 y entrega cofres
+
+19-alumno mira rankings del curso 
+    19.1-alumno mira objetos 
+
+20-Alumno ataca a otro 
+    (monedas cambia, codicia, chibis seleccionados, se compara)
+    (insert tabla notificaciones)
+
 
 
 
