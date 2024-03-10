@@ -80,6 +80,8 @@ CREATE TABLE PROF_PUNTUAR(
     ID_ALUMNO_CLASE INT, 
     ID_COFRE INT,
     Nota INT,
+    id_habilidad int,
+    FOREIGN key(id_habilidad) REFERENCES ranking(ID),
     FOREIGN KEY (ID_PROFESOR) REFERENCES PROFESOR(ID),
     FOREIGN key (ID_ALUMNO_CLASE) REFERENCES ALUMNO_CLASE(ID_ALUMNO_CLASE),
     FOREIGN key (ID_COFRE) REFERENCES COFRE(ID)
@@ -221,11 +223,18 @@ CREATE TABLE NOTIFICACIONES(
 create table ranking(
     ID int PRIMARY key AUTO_INCREMENT,
     nombre_habilidad varchar(200) not null,
-    puntos int check(puntos>=0),
-    id_alumno int,
-    FOREIGN key (id_alumno) REFERENCES ALUMNO_CLASE(ID_ALUMNO_CLASE)
+    id_clase int,
+    FOREIGN key (id_clase) REFERENCES clase(ID)
 )
 
+create table ranking_alumno(
+    ID int PRIMARY key AUTO_INCREMENT,
+    id_alumno int, 
+    FOREIGN key (id_alumno) REFERENCES ALUMNO_CLASE(ID_ALUMNO_CLASE),
+    id_habilidad int,
+    FOREIGN key (id_habilidad) REFERENCES ranking(ID),
+    puntos int check(puntos>=0)
+)
 
 
 CREATE TABLE    (

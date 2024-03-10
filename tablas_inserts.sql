@@ -156,8 +156,15 @@ values
 insert into OBJETOS_TIENDA(ID_objeto, ID_PROPIETARIO, funcion)
 values (21, 1, "permite alimnetar al dragon")
 
--- 18 profesor crea ranking 
-insert into ranking(nombre_habilidad, )
+
+18 profesor crea ranking 
+
+insert into ranking(nombre_habilidad,id_clase)
+values 
+    ("Base de datos", 1)
+
+18.1 profesor crea tarea 
+
 
 
 
