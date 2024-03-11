@@ -195,8 +195,20 @@ where clase.ID = 1
 
 
     19.1-alumno mira objetos 
-
-
+-- ver ojetos que no son monigotes
+select * from  OBJETOS_TIENDA
+join ALUMNO_CLASE on OBJETOS_TIENDA.ID_PROPIETARIO = ALUMNO_CLASE.ID_ALUMNO_CLASE
+where ALUMNO_CLASE.ID = 1 
+-- ver monigotes
+    --dragon
+select DRAGON.NOMBRE, DRAGON.ATAQUE, DRAGON.DEFENSA, DRAGON.DESCRIPCION, DRAGON.NIVEL FROM DRAGON 
+WHERE DRAGON.ID_PROPIETARIO = 1
+    --mascotas
+SELECT MASCOTAS.NOMBRE, MASCOTAS.ATAQUE, MASCOTAS.DEFENSA, MASCOTAS.DESCRIPCION, MASCOTAS.HABILIDAD_ESPECIAL FROM MASCOTAS
+WHERE MASCOTAS.ID_PROPIETARIO = 1
+    -- chibis 
+select CHIBIS.NOMBRE, CHIBIS.ATAQUE, CHIBIS.DEFESA, CHIBIS.DESCRIPCION, CHIBIS.FAMILIA from CHIBIS
+WHERE CHIBIS.ID_PROPIETARIO = 1
 20-Alumno ataca a otro 
     (monedas cambia, codicia, chibis seleccionados, se compara)
     (insert tabla notificaciones)
