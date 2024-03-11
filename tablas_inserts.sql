@@ -25,12 +25,9 @@ INSERT INTO PROFESOR (NOMBRE, EMAIL, CONTRASEÑA) VALUES (
 SELECT ID FROM PROFESOR WHERE EMAIL="fonsifonsifonsi@fonsi.fonsi" AND CONTRASEÑA="uwuwuwueOssas"
 
 6-crear nueva clase/curso
+
 INSERT INTO CLASE(NOMBRE, ID_PROFESOR) VALUES 
 ("BADAT", (SELECT ID FROM PROFESOR WHERE NOMBRE = 'FONSI'));
-
-
-INSERT INTO ALUMNO_CLASE()
-
 
 
 7-ver informacion del curso 
@@ -210,12 +207,7 @@ WHERE MASCOTAS.ID_PROPIETARIO = 1
 select CHIBIS.NOMBRE, CHIBIS.ATAQUE, CHIBIS.DEFESA, CHIBIS.DESCRIPCION, CHIBIS.FAMILIA from CHIBIS
 WHERE CHIBIS.ID_PROPIETARIO = 1
 
+
 20-Alumno ataca a otro 
-    INSERT INTO ATACAR(ID_ATACANTE, ID_DEFENSOR)
-    VALUES 
-    (1, 2)
-
-    SELECT 
-
     (monedas cambia, codicia, chibis seleccionados, se compara)
     (insert tabla notificaciones)

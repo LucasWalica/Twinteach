@@ -235,19 +235,3 @@ create table ranking_alumno(
     FOREIGN key (id_habilidad) REFERENCES ranking(ID),
     puntos int check(puntos>=0)
 )
-
-
-
-
-
-
-CREATE TABLE    (
-    ID INT PRIMARY KEY AUTO_INCREMENT,
-    NOMBRE VARCHAR(30) NOT NULL,
-    ID_PROFESOR INT,
-    FOREIGN KEY(ID_PROFESOR) REFERENCES PROFESOR(ID),
-    ESTADO_PAZ tinyint(1) NOT NULL DEFAULT=0,
-    PERIODO_PAZ INTERVAL SECOND; 
-    ID_ranking int 
-    FOREIGN key (ID_ranking) REFERENCES ranking(ID)   
-)
