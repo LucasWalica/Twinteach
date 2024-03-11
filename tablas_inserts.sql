@@ -168,12 +168,34 @@ values
     ("Base de datos", 1)
 
     18.1 profesor crea tarea 
-
+        insert into TAREA(ID_PROFESOR, nombre_tarea, id_habilidad)
+        values 
+        (1, "Modelo relacional provincias", 1)
 
     18.2 profesor guarda notas a 10 y entrega cofres
+        insert into tarea_alumno(ID_TAREA, Nota, ID_ALUMNO_CLASE)
+        values 
+        (1, 10, 1)
+        (1, 10, 2)
+
+        -- asignar cofres
+        insert into cofre_alumno(ID_ALUMNO_CLASE, ID_cofre)
+        values
+        (1, 4)
+        (2, 4)
 
 19-alumno mira rankings del curso 
+
+select alumno.NOMBRE, alumno.ICONO, ranking_alumno.puntos from ranking
+join ranking_alumno on ranking.ID = ranking_alumno.id_habilidad
+join ALUMNO_CLASE on ranking_alumno.id_alumno = ALUMNO_CLASE.ID_ALUMNO_CLASE
+join alumno on ALUMNO_CLASE.ID_ALUMNO_CLASE = alumno.ID
+join clase on ranking.id_clase = clase.ID
+where clase.ID = 1 
+
+
     19.1-alumno mira objetos 
+
 
 20-Alumno ataca a otro 
     (monedas cambia, codicia, chibis seleccionados, se compara)
