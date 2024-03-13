@@ -206,8 +206,11 @@ WHERE CHIBIS.ID_PROPIETARIO = 1
 
 
 20-Alumno ataca a otro 
+    
     insert into atacar(ID_ATAQUE, ID_ATACANTE)
     values
     (1, 2)
 
-
+    -- el valor random del ataque estara en javascript
+    -- si el atacante tiene exito se le restas monedas
+    -- siempre la codicia del atacante sube
