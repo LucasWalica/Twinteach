@@ -1,6 +1,3 @@
-
-
-
 1-crear cuenta-> 
 
 INSERT INTO ALUMNO(CORREO, NOMBRE, CONTRASEÑA) VALUES (
@@ -71,9 +68,9 @@ update table participar
 set participar.aceptado = 2 
 where id_alumno = 1 
 
-insert into alumno_clase(id_alumno, id_clase, codicia, defensa, monedas, ataque)
+insert into alumno_clase(id_alumno, id_clase, codicia, monedas)
 values
-    (1, 1, 0, 0 ,0, 0)
+    (1, 1, 0, 0 )
 
 10- ver alumnos_curso 
 select * from ALUMNO_CLASE 
