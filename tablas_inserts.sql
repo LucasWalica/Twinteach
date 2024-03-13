@@ -104,6 +104,14 @@ insert into cofre_alumno(ID_ALUMNO_CLASE, ID_cofre)
 -- cofre de madera (habria que crear el cofre)
 
 13-Abrir cofre
+-- Obtener un cofre disponible para un alumno específico
+SELECT ca.ID_cofre
+FROM cofre_alumno AS ca
+JOIN COFRE AS c ON ca.ID_cofre = c.ID
+JOIN ALUMNO_CLASE AS ac ON ca.ID_ALUMNO_CLASE = ac.ID_ALUMNO_CLASE
+WHERE ac.ID_ALUMNO = <ID_DEL_ALUMNO>
+AND ca.ID_cofre NOT IN (SELECT ID_cofre FROM cofre_alumno)
+
 
 14-Insertar objetos del cofre abierto
 (monedas, piedras de fuego, calabaza, hansel)
