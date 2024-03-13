@@ -206,5 +206,8 @@ WHERE CHIBIS.ID_PROPIETARIO = 1
 
 
 20-Alumno ataca a otro 
-    (monedas cambia, codicia, chibis seleccionados, se compara)
-    (insert tabla notificaciones)
+    insert into atacar(ID_ATAQUE, ID_ATACANTE)
+    values
+    (1, 2)
+
+
